@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import Content from './components/Content/Content'
 import RecentsWorks from './components/RecentsWorks/RecentsWorks'
+import ContactForm from './components/ContactForm/ContactForm'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Home></Home>
       <Content></Content>
       <RecentsWorks></RecentsWorks>
+      <ContactForm></ContactForm>
     </div>
   )
 }
