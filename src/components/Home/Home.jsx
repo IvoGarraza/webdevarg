@@ -1,10 +1,14 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import video from '../../assets/webdeveloper.mp4'
 
 const Home = () => {
   return (
-    <div className="bg-black w-full flex sm:flex-row flex-col justify-around items-center text-white h-96">
-      <div className="flex flex-col text-start">
+    <div className="bg-black relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[35rem]">
+      
+  {/*     <video src={video} className="h-full absolute right-0"></video> */}
+     
+      <div className="flex flex-col text-start px-6">
         <div>
           <TypeAnimation
             sequence={[
@@ -30,7 +34,7 @@ const Home = () => {
         </span>
         <div className="mt-4">
           <a
-            href="#_"
+            href="#Form"
             class="relative inline-flex items-center px-10 py-3 overflow-hidden text-lg font-medium text-yellow-400 border-2 border-yellow-400 rounded-full hover:text-white group hover:bg-gray-50"
           >
             <span class="absolute left-0 block w-full h-0 transition-all bg-yellow-400 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
@@ -40,7 +44,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div>Iagen Home</div>
+      <div className="sm:flex hidden">Iagen Home</div>
     </div>
   );
 };
