@@ -4,7 +4,7 @@ import imageWork from '../../assets/andesdean.jpg'
 
 const RecentsWorks = () => {
   return (
-    <div className='w-full bg-black h-96 text-white flex flex-col items-center justify-center shadow-md'>
+    <div className='w-full bg-terciario h-[40rem] text-white flex flex-col items-center justify-center shadow-md'>
         <span className='font-bold text-2xl'>Trabajo reciente</span>
         <span>Podes ver el ultimo trabajo que realizamos!</span>
         <div className='flex sm:flex-row items-center w-full justify-center pt-12'>

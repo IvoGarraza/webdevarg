@@ -1,48 +1,107 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_84vju6n', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
-    <div id='Form' className="h-[40rem] flex flex-col bg-yellow-400 text-black items-center justify-center">
-      <div className="h-[20%] w-full flex items-center justify-center text-black">
+    <div
+      id="Form"
+      className="h-[40rem] flex flex-row bg-yellow-400 text-black items-center justify-center"
+    >
+      <div className="h-[20%] w-1/2 flex items-center justify-center text-black">
         <span className="font-bold text-2xl">¡Contactanos!</span>
       </div>
-      <div className="h-[70%] w-full items-center justify-around flex flex-col">
-        <div className=" w-full h-1/6 flex  items-center justify-center">
-          <label className="w-[50%] border-black border-[2px] px-4 rounded-full">
-            Name:
-            <input
-              className="text-black bg-yellow-400 p-2 rounded-full outline-none"
-              placeholder="Your name..."
-            ></input>
-          </label>
-        </div>
-        <div className=" w-full h-1/6 flex  items-center justify-center">
-          <label className="w-[50%] border-black border-[2px] px-4 rounded-full">
-            Email:
-            <input
-              className="text-black bg-yellow-400 p-2 rounded-full outline-none"
-              placeholder="Your email..."
-            ></input>
-          </label>
-        </div>
-        <div className=" w-full h-1/6 flex  items-center justify-center">
-          <label className="w-[50%] border-black border-[2px] px-4 rounded-full">
-            Phone number:
-            <input
-              className="text-black bg-yellow-400 p-2 rounded-full outline-none"
-              placeholder="Phone number..."
-            ></input>
-          </label>
-        </div>
-        <div className=" w-full h-1/6 flex  items-center justify-center">
-          <label className="w-[50%] border-black border-[2px] flex px-4 rounded-full">
-            Messaje:
-            <textarea
-              className="text-black bg-yellow-400 p-2 rounded-full outline-none"
-              placeholder="Message..."
-              type="text"
-            ></textarea>
-          </label>
+      <div className="h-[90%] rounded-md w-[45%] items-center justify-around flex flex-col bg-white ">
+        <div class="flex items-center justify-center w-[90%]">
+          <div class=" w-full ">
+            <form ref={form} onSubmit={sendEmail}>
+              <div class="mb-5">
+                <label
+                  for="name"
+                  class="mb-3 block text-base font-medium text-[#07074D]"
+                >
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nombre"
+                  class="w-full rounded-md border border-black py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label
+                  for="email"
+                  class="mb-3 block text-base font-medium text-[#07074D]"
+                >
+                  Email 
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@domain.com"
+                  class="w-full rounded-md border border-black py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label
+                  for="subject"
+                  class="mb-3 block text-base font-medium text-[#07074D]"
+                >
+                  Numero de telefono
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Telefono"
+                  class="w-full rounded-md border border-black bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label
+                  for="message"
+                  class="mb-3 block text-base font-medium text-[#07074D]"
+                >
+                  Mensaje
+                </label>
+                <textarea
+                  rows="4"
+                  name="message"
+                  id="message"
+                  placeholder="Escriba su mensaje"
+                  class="w-full resize-none rounded-md border border-black bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                ></textarea>
+              </div>
+              <div>
+                <input class="hover:shadow-form rounded-md bg-black hover:bg-yellow-400 hover:text-white transition-all py-3 px-8 text-base font-semibold text-white outline-none" type="submit" value="Enviar" ></input>
+{/*                 <button class="hover:shadow-form rounded-md bg-black hover:bg-yellow-400 hover:text-white transition-all py-3 px-8 text-base font-semibold text-white outline-none">
+                  Enviar
+                </button> */}
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
