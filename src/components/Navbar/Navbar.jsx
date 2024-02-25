@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo-recortado-icon.png";
 import { motion, useScroll } from "framer-motion";
+import menu from "../../assets/SVG/menu.svg";
+import close from "../../assets/SVG/close.svg";
 
 const Navbar = () => {
   const [navbarColor, setNavbarColor] = useState("bg-transparent text-[#fff]");
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [toggle, setToggle] = useState(false);
   const { scrollYProgress } = useScroll();
 
   const handleScroll = () => {
@@ -79,6 +82,20 @@ const Navbar = () => {
           <span className="w-full absolute h-0 -translate-y-10 group-hover:tranlate-y-0 transition-all group-hover:bg-yellow-400 group-hover:h-36"></span>
           <span className="z-10 group-hover:text-black">Contacto</span>
         </a>
+      </div>
+      <div className="sm:hidden flex  items-center justify-center pr-4">
+        <img
+          src={toggle ? close : menu}
+          onClick={() => setToggle((prev) => !prev)}
+          className="z-10"
+        ></img>
+        <div className={`absolute items-center justify-center w-full right-0 top-14  bg-black ${toggle? 'h-96 flex transition-all':'h-0 hidden transition-all'}`}>
+          <div className="text-white flex flex-col w-full h-full justify-center items-end px-6">
+            <a href="#services" className="my-4" onClick={() => setToggle((prev) => !prev)}>Servicios</a>
+            <a href="#content" className="my-4" onClick={() => setToggle((prev) => !prev)}>¿Porque nosotros?</a>
+            <a href="#Form" className="my-4" onClick={() => setToggle((prev) => !prev)}>Contacto</a>
+          </div>
+        </div>
       </div>
       <div
         style={{ width: `${scrollProgress * 100}%` }}

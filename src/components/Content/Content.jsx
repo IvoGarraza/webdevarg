@@ -7,16 +7,19 @@ import draw from "../../assets/HOMEFINAL.png";
 import search from "../../assets/SVG/search.svg";
 import design from "../../assets/SVG/design.svg";
 import sales from "../../assets/SVG/sales.svg";
-import isometricDraw from '../../assets/SVG/isometric-draw.svg'
+import isometricDraw from "../../assets/SVG/isometric-draw.svg";
 
 const Content = () => {
   return (
-    <div id='content' className="w-full relative flex sm:flex-row items-center flex-col h-[35rem]">
-      <div className="w-1/2 flex items-center justify-center">
+    <div
+      id="content"
+      className="w-full relative flex sm:flex-row items-center flex-col h-[35rem]"
+    >
+      <div className="w-1/2 hidden sm:flex items-center justify-center">
         <img src={isometricDraw} className="w-[80%]"></img>
       </div>
-      <div className="w-1/2 h-full flex flex-col items-center justify-around">
-        <div className="group w-full h-1/3 flex flex-row items-center pl-12 rounded-md hover:bg-slate-300">
+      <div className="sm:w-1/2 w-full h-full flex flex-col items-center justify-around">
+        <div className="group w-full h-1/3 flex flex-row items-center sm:pl-12 px-4 rounded-md hover:bg-slate-300">
           <div>
             <img className="w-32 mr-10" src={sales}></img>
             {/* <ReactLogo></ReactLogo> */}
@@ -30,7 +33,7 @@ const Content = () => {
             <div className="w-0 h-1 group-hover:w-full transition-all duration-700 bg-secundario rounded-full"></div>
           </div>
         </div>
-        <div className="group w-full h-1/3 flex flex-row items-center pl-12 rounded-md hover:bg-slate-300">
+        <div className="group w-full h-1/3 flex flex-row items-center sm:pl-12 px-4 rounded-md hover:bg-slate-300">
           <div>
             <img className="w-32 mr-10" src={search}></img>
           </div>
@@ -43,7 +46,7 @@ const Content = () => {
             <div className="w-0 h-1 group-hover:w-full transition-all duration-700 bg-secundario rounded-full"></div>
           </div>
         </div>
-        <div className="group w-full h-1/3 flex flex-row items-center pl-12 rounded-md hover:bg-slate-300">
+        <div className="group w-full h-1/3 flex flex-row items-center sm:pl-12 px-4 rounded-md hover:bg-slate-300">
           <div>
             <img className="w-32 mr-10" src={design}></img>
           </div>

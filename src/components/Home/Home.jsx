@@ -7,7 +7,7 @@ import { color } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-r from-40% from-terciario overflow-hidden relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[40rem] pt-6">
+    <div className="bg-gradient-to-r from-40% from-black overflow-hidden relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[40rem] pt-6">
       <video
         src={typing}
         className="sm:h-auto h-full -z-10 absolute right-0"
