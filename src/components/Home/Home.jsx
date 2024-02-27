@@ -4,17 +4,26 @@ import video from "../../assets/webdeveloper.mp4";
 import typing from "../../assets/typing-video.mp4";
 import coding from "../../assets/SVG/codign-home.svg";
 import { color } from "framer-motion";
+import Particles from "@tsparticles/react";
+import { loadFull } from "tsparticles";
 
 const Home = () => {
+  function ParticleBg(){
+  async function loadParticles(main) {
+    await loadFull(main)
+  }
+  }
   return (
     <div className="bg-gradient-to-r from-40% from-black overflow-hidden relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[40rem] pt-6">
       <video
         src={typing}
-        className="sm:h-auto h-full sm:w-full w-auto -z-10 absolute right-0"
+        className="sm:h-auto sm:flex hidden h-full sm:w-full w-auto -z-10 absolute right-0"
         loop
         autoPlay
         muted
       ></video>
+{/*       <Particles
+      init={loadParticles()}></Particles> */}
 
       <div className="flex flex-col text-start px-6 sm:pl-12 sm:w-1/2 w-full">
         <div>
