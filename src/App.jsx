@@ -22,7 +22,7 @@ function App() {
       <Services></Services>
       <ContactForm></ContactForm>
       <Footer></Footer>
-      <FloatingWhatsApp phoneNumber='+5493562408275' accountName='WebdeV'></FloatingWhatsApp>
+      <FloatingWhatsApp phoneNumber='+5493562408275' accountName='WebdeV' className='wm:w-auto w-10'></FloatingWhatsApp>
     </div>
   )
 }

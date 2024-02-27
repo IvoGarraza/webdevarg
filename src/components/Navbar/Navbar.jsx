@@ -40,7 +40,7 @@ const Navbar = () => {
       className={`w-full h-16 flex flex-row items-center justify-between duration-1000 transition-all z-10 ${navbarColor} text-white fixed`}
     >
       {/* Flecha back to the top */}
-      <div className="absolute -bottom-[40rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center">
+      <div className="absolute sm:-bottom-[40rem] -bottom-[43rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

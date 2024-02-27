@@ -25,13 +25,13 @@ const ContactForm = () => {
   return (
     <div
       id="Form"
-      className="h-[40rem] flex flex-row bg-yellow-400 text-black items-center justify-center"
+      className="sm:h-[40rem] h-[50rem] flex sm:flex-row flex-col bg-yellow-400 text-black items-center justify-center"
     >
       <div className="h-[20%] w-1/2 flex items-center justify-center text-black">
         <span className="font-bold text-2xl">¡Contactanos!</span>
       </div>
-      <div className="h-[90%] rounded-md w-[45%] items-center justify-around flex flex-col bg-white ">
-        <div class="flex items-center justify-center w-[90%]">
+      <div className="h-[90%]  sm:w-[45%] w-[95%] items-center justify-around flex flex-col  ">
+        <div class="flex items-center bg-white rounded-md justify-center w-full px-4 py-6">
           <div class=" w-full ">
             <form ref={form} onSubmit={sendEmail}>
               <div class="mb-5">
