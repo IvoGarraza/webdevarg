@@ -15,8 +15,9 @@ const Content = () => {
       id="content"
       className="w-full bg-white relative flex sm:flex-row items-center flex-col h-[35rem]"
     >
-      <div className="w-1/2 hidden sm:flex items-center justify-center">
-        <img src={isometricDraw} className="w-[80%]"></img>
+      <div className="w-1/2 h-full hidden sm:flex flex-col items-center justify-center">
+        <span className="font-bold text-3xl w-full text-center">¡Tenemos diferentes soluciones para tu idea!</span>
+        <img src={isometricDraw} className="w-[70%]"></img>
       </div>
       <div className="sm:w-1/2 w-full h-full flex flex-col items-center justify-around">
         <div className="group w-full h-1/3 flex flex-row items-center sm:pl-12 px-4 rounded-md hover:bg-slate-300">

@@ -3,10 +3,12 @@ import { TypeAnimation } from "react-type-animation";
 import video from "../../assets/webdeveloper.mp4";
 import typing from "../../assets/typing-video.mp4";
 import coding from "../../assets/SVG/codign-home.svg";
+import dev from '../../assets/SVG/dev.svg'
 import { color } from "framer-motion";
 import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import ParticlesComponent from "../Particles/Particles";
+import HomeSvg from "../Animations/HomeSvg";
 
 const Home = () => {
   function ParticleBg(){
@@ -16,15 +18,15 @@ const Home = () => {
   }
   return (
     <div className="bg-transparent sm:bg-gradient-to-r from-10% from-black overflow-hidden relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[40rem] pt-6">
-      {/* <video
+      <video
         src={typing}
         className="sm:h-auto sm:flex hidden h-full sm:w-full w-auto -z-10 absolute right-0"
         loop
         autoPlay
         muted
-      ></video> */}
+      ></video>
       <div className="relative -z-30">
-        <ParticlesComponent className='absolute -z-10'></ParticlesComponent>
+       {/*  <ParticlesComponent className='absolute -z-10'></ParticlesComponent> */}
       </div>
 
       <div className="flex flex-col text-start px-6 sm:pl-12 sm:w-1/2 w-full">
@@ -63,7 +65,8 @@ const Home = () => {
         </div>
       </div>
       <div className="sm:flex items-center justify-center hidden sm:w-1/2 w-full">
-        <img className="w-[70%]" src={coding}></img>
+        {/* <img className="w-[90%]" src={dev}></img> */}
+        <HomeSvg></HomeSvg>
       </div>
     </div>
   );

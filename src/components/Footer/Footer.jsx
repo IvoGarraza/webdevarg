@@ -1,4 +1,6 @@
 import React from "react";
+import instagram from '../../assets/SVG/instagram.svg'
+import facebook from '../../assets/SVG/facebook.svg'
 
 const Footer = () => {
   return (
@@ -13,18 +15,20 @@ const Footer = () => {
               Find us on any of these platforms, we respond 1-2 business days.
             </h5> */}
             <div class="mt-6 lg:mb-0 mb-6">
-              <button
+              <a
+                href=""
                 class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button
+                <img src={facebook}></img>
+              </a>
+              <a
+              href=""
                 class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
               >
-                <i class="fab fa-facebook-square"></i>
-              </button>
+                <img src={instagram}></img>
+              </a>
 {/*               <button
                 class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
