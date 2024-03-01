@@ -4,12 +4,12 @@ import imageWork from '../../assets/andesdean.jpg'
 
 const RecentsWorks = () => {
   return (
-    <div className='w-full bg-cuarto h-[40rem] text-white flex flex-col items-center sm:justify-center justify-around shadow-md'>
+    <div className='w-full bg-transparent h-[40rem] text-white flex flex-col items-center sm:justify-center justify-around shadow-md'>
         <div className='flex flex-col items-center justify-center'>
             <span className='font-bold text-2xl'>Trabajo reciente</span>
             <span>Podes ver el ultimo trabajo que realizamos!</span>
         </div>
-        <div className='flex sm:flex-row flex-col items-center w-full justify-center sm:pt-12'>
+        <div className='flex sm:flex-row flex-col h-[60%] items-center w-full sm:justify-center justify-around sm:pt-12'>
             <div className=''>
                 <img src={imageWork} className='w-72 rounded-md grayscale-1'></img>    
             </div>       

@@ -13,7 +13,7 @@ const Content = () => {
   return (
     <div
       id="content"
-      className="w-full relative flex sm:flex-row items-center flex-col h-[35rem]"
+      className="w-full bg-white relative flex sm:flex-row items-center flex-col h-[35rem]"
     >
       <div className="w-1/2 hidden sm:flex items-center justify-center">
         <img src={isometricDraw} className="w-[80%]"></img>

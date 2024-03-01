@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="sm:h-[50rem] h-[80rem] w-full flex flex-col items-center justify-center"
+      className="sm:h-[50rem] h-[80rem] w-full bg-white flex flex-col items-center justify-center"
     >
       <div className="w-full sm:h-[20%] h-[10%] flex flex-col items-center justify-center ">
         <span className="text-2xl font-bold">Nuestros servicios</span>
@@ -13,11 +13,11 @@ const Services = () => {
         </span>
       </div>
       <div className=" w-full flex sm:flex-row flex-col items-center justify-around py-6 sm:h-[80%] h-[90%]">
-        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 h-[30%] w-[90%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
+        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] h-full w-[90%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
             <span className="text-xl sm:mb-[10px] mb-[5px]">One Page</span>
             <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$2000</span>
+            <span className="sm:mt-[10px] mt-[5px]">$0...</span>
           </div>
           <div className="h-[70%] overflow-hidden">
             <p className="p-4  text-center">
@@ -33,11 +33,11 @@ const Services = () => {
             Solicitar
           </a>
         </div>
-        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
+        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
-            <span className="text-xl sm:mb-[10px] mb-[5px]">One Page</span>
+            <span className="text-xl sm:mb-[10px] mb-[5px]">Institucional</span>
             <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$2000</span>
+            <span className="sm:mt-[10px] mt-[5px]">$0...</span>
           </div>
           <div className="h-[70%] overflow-hidden">
             <p className="p-4  text-center">
@@ -51,28 +51,27 @@ const Services = () => {
               para obtener información completa y específica sobre tu negocio.
             </p>
           </div>
-          <a className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
+          <a href="https://www.google.com.ar" className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
             Solicitar
           </a>
         </div>
-        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
+        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
-            <span className="text-xl sm:mb-[10px] mb-[5px]">One Page</span>
+            <span className="text-xl sm:mb-[10px] mb-[5px]">Tienda online</span>
             <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$2000</span>
+            <span className="sm:mt-[10px] mt-[5px]">$0...</span>
           </div>
           <div className="overflow-hidden h-[70%]">
             <p className="p-4 text-center">
               Si deseas vender productos en línea, necesitas una página de
               e-commerce. Es como tener una tienda virtual abierta las 24 horas.
               Desde dispositivos móviles, tus clientes pueden explorar tu
-              catálogo, realizar compras seguras y recibir sus productos en la
-              puerta de su casa. Es una forma eficiente y conveniente de
+              catálogo y realizar compras seguras. Es una forma eficiente y conveniente de
               expandir tu negocio en el mundo digital.
             </p>
           </div>
-          <a className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
-            Solicitar
+          <a className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md pointer-events-none cursor-default opacity-40">
+            No Disponible
           </a>
         </div>
       </div>
