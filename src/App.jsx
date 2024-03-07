@@ -8,10 +8,26 @@ import Footer from "./components/Footer/Footer";
 import Services from "./components/Services/Services";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import logo from "../src/assets/logo.png";
+import i18next from "i18next";
+import global_es from './traducciones/es/global.json'
+import global_en from './traducciones/en/global.json'
+import { I18nextProvider } from "react-i18next";
 
 function App() {
+  i18next.init({
+    interpolation: { escapeValue: false }, // Evita la necesidad de escapar contenido
+    lng: "es", // Idioma predeterminado
+    resources: {
+      en: {
+        global: global_en,
+      },
+      es: {
+        global: global_es,
+      },
+    },
+  })
   return (
-    <div className="flex flex-col relative w font-montserrat">
+    <I18nextProvider i18n={i18next} className="flex flex-col relative w font-montserrat">
       <Navbar className=""></Navbar>
       <Home></Home>
       <Content></Content>
@@ -31,7 +47,7 @@ function App() {
         allowEsc='true'
         allowClickAway='true'
       ></FloatingWhatsApp>
-    </div>
+    </I18nextProvider>
   );
 }
 

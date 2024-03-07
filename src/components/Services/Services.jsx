@@ -1,6 +1,9 @@
 import React from "react";
 
 const Services = () => {
+  
+
+
   return (
     <div
       id="services"
@@ -11,13 +14,14 @@ const Services = () => {
         <span className="font-medium text-center">
           Estos son algunos de los planes que ofrecemos
         </span>
+        <span className="text-gray-700">(El precio de los servicios comprende los 12 meses, para un periodo mas largo consultar cotizacion)</span>
       </div>
       <div className=" w-full flex sm:flex-row flex-col items-center justify-around py-6 sm:h-[80%] h-[90%]">
         <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] h-full w-[90%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
             <span className="text-xl sm:mb-[10px] mb-[5px]">One Page</span>
             <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$0...</span>
+            <span className="sm:mt-[10px] mt-[5px]">$110.000</span>
           </div>
           <div className="h-[70%] overflow-hidden">
             <p className="p-4  text-center">
@@ -30,14 +34,14 @@ const Services = () => {
             </p>
           </div>
           <a className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
-            Solicitar
+            Consultar
           </a>
         </div>
         <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
             <span className="text-xl sm:mb-[10px] mb-[5px]">Institucional</span>
             <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$0...</span>
+            <span className="sm:mt-[10px] mt-[5px]">$160.000</span>
           </div>
           <div className="h-[70%] overflow-hidden">
             <p className="p-4  text-center">
@@ -52,7 +56,7 @@ const Services = () => {
             </p>
           </div>
           <a href="https://www.google.com.ar" className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
-            Solicitar
+            Consultar
           </a>
         </div>
         <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
@@ -70,8 +74,8 @@ const Services = () => {
               expandir tu negocio en el mundo digital.
             </p>
           </div>
-          <a className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md pointer-events-none cursor-default opacity-40">
-            No Disponible
+          <a href="https://www.google.com.ar" className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
+            Consultar
           </a>
         </div>
       </div>

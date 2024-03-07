@@ -64,13 +64,13 @@ const HomeSvg = () => {
       />
       <circle cx="141.42" cy="71.03" r="5.33" fill="#ffd200" />
       <rect x="206.7" y="90" width="69.76" height="112.33" fill="#f2f2f2" />
-      <rect x="227.41" y="103.35" width="28.33" height="7.49" fill="#c9c9c9" />
-      <rect x="227.41" y="117.06" width="28.33" height="7.49" fill="#c9c9c9" />
-      <rect x="218.13" y="134.73" width="47" height="58.02" fill="#e6e6e6" />
+      <rect x="227.41" y="103.35" width="28.33" height="7.49" fill="#c9c9c9" className="animate-pulse"/>
+      <rect x="227.41" y="117.06" width="28.33" height="7.49" fill="#c9c9c9" className="animate-pulse"/>
+      <rect x="218.13" y="134.73" width="47" height="58.02" fill="#e6e6e6" className="animate-pulse"/>
       <rect x="124.44" y="90" width="69.76" height="112.33" fill="#f2f2f2" />
-      <rect x="145.15" y="103.35" width="28.33" height="7.49" fill="#c9c9c9" />
-      <rect x="145.15" y="117.06" width="28.33" height="7.49" fill="#c9c9c9" />
-      <rect x="135.87" y="134.73" width="47" height="58.02" fill="#e6e6e6" />
+      <rect x="145.15" y="103.35" width="28.33" height="7.49" fill="#c9c9c9" className="animate-pulse"/>
+      <rect x="145.15" y="117.06" width="28.33" height="7.49" fill="#c9c9c9" className="animate-pulse"/>
+      <rect x="135.87" y="134.73" width="47" height="58.02" fill="#e6e6e6" className="animate-pulse"/>
       <path
         d="M223.16,163.74s5.16,4.48,0,7.37,5.66,8.39,0,13.14-5.49,25.75-47.49,37.42h-58S87.33,202.3,94.33,166.94,120,134.51,120,134.51l6-17.79-1.54-11.56s8.92-10.79,14.91-1.81,12.44,18.39,2.71,21.52L135.66,150l13.4-2.33,6.64,36.58L160,200l26-.33s16-14.84,17-15.42S223.16,163.74,223.16,163.74Z"
         opacity="0.08"
@@ -78,6 +78,7 @@ const HomeSvg = () => {
       <path
         d="M142.73,140.42s19,7.3,22.27,30.69,17.75,22.89,35,8.64,21.77-22.25,23-18.5-2.51,6.5-2.51,6.5,6.4,3.22,2.51,6.38-4.78,1.5-7.26,4.5c-12.23,14.77-43.31,51-73,11.08Z"
         fill="#f4a28c"
+        id="brazo"
       />
       <path
         d="M142.06,140.05s22.77,5.62,27.27,41.12l-20.66,17-6.61-7.84Z"

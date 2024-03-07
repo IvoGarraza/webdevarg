@@ -18,15 +18,15 @@ const Home = () => {
   }
   return (
     <div className="bg-transparent sm:bg-gradient-to-r from-10% from-black overflow-hidden relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[40rem] pt-6">
-      <video
+      {/* <video
         src={typing}
         className="sm:h-auto sm:flex hidden h-full sm:w-full w-auto -z-10 absolute right-0"
         loop
         autoPlay
         muted
-      ></video>
+      ></video> */}
       <div className="relative -z-30">
-       {/*  <ParticlesComponent className='absolute -z-10'></ParticlesComponent> */}
+        <ParticlesComponent className='absolute -z-10'></ParticlesComponent>
       </div>
 
       <div className="flex flex-col text-start px-6 sm:pl-12 sm:w-1/2 w-full">

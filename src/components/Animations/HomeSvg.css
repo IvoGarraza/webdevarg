@@ -1,10 +1,24 @@
 #code{
-    animation: bounce 4s infinite;
+    animation: bounceSlow 3s infinite;
 
 }
-@keyframes bounce {
+/* #brazo{
+  animation: mover 4s infinite
+}
+ */
+@keyframes mover {
+  0%, 100%{
+    transform: translateX(10%);
+
+  }
+  50%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceSlow {
     0%, 100% {
-      transform: translateY(-3%);
+      transform: translateY(-2%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
     50% {

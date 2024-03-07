@@ -9,6 +9,7 @@ const Navbar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [toggle, setToggle] = useState(false);
   const { scrollYProgress } = useScroll();
+  const [language, setLanguage] = useState("en");
 
   const handleScroll = () => {
     const totalScroll = document.documentElement.scrollTop;
@@ -28,6 +29,24 @@ const Navbar = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      // No incluir behavior si ya está configurado en el CSS
+    });
+  }
+
+  const toggleLanguage = (e) => {
+    e.stopPropagation();
+    if (language === "en") {
+      setLanguage("es");
+      i18n.changeLanguage("es");
+    } else {
+      setLanguage("en");
+      i18n.changeLanguage("en");
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -40,7 +59,9 @@ const Navbar = () => {
       className={`w-full h-16 flex flex-row items-center justify-between duration-1000 transition-all z-10 ${navbarColor} text-white fixed`}
     >
       {/* Flecha back to the top */}
-      <div className="absolute sm:-bottom-[40rem] -bottom-[55rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center">
+      <div 
+      onClick={scrollToTop}
+      className="absolute cursor-pointer sm:top-[40rem] -bottom-[55rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -59,6 +80,9 @@ const Navbar = () => {
       <div className="w-1/3 ml-4 flex flex-row">
         <img src={logo} className="w-12 mr-2"></img>
         <span className="font-bold">Webdev</span>
+      </div>
+      <div>
+        <span>Idioma</span>
       </div>
       <div className=" hidden sm:flex flex-row w-1/2 justify-end h-full items-center">
         <a
