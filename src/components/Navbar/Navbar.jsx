@@ -3,13 +3,16 @@ import logo from "../../assets/logo-recortado-icon.png";
 import { motion, useScroll } from "framer-motion";
 import menu from "../../assets/SVG/menu.svg";
 import close from "../../assets/SVG/close.svg";
+import { useTranslation } from "react-i18next";
+import ToggleLanguage from "../ToggleLenguage/ToggleLanguage";
 
 const Navbar = () => {
   const [navbarColor, setNavbarColor] = useState("bg-transparent text-[#fff]");
   const [scrollProgress, setScrollProgress] = useState(0);
   const [toggle, setToggle] = useState(false);
   const { scrollYProgress } = useScroll();
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("es");
+  const [t, i18n] = useTranslation("global");
 
   const handleScroll = () => {
     const totalScroll = document.documentElement.scrollTop;
@@ -34,16 +37,18 @@ const Navbar = () => {
       top: 0,
       // No incluir behavior si ya está configurado en el CSS
     });
-  }
+  };
 
   const toggleLanguage = (e) => {
     e.stopPropagation();
     if (language === "en") {
       setLanguage("es");
       i18n.changeLanguage("es");
+      console.log(language);
     } else {
       setLanguage("en");
       i18n.changeLanguage("en");
+      console.log(language);
     }
   };
 
@@ -53,15 +58,16 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  console.log(language);
   return (
     <div
       className={`w-full h-16 flex flex-row items-center justify-between duration-1000 transition-all z-10 ${navbarColor} text-white fixed`}
     >
       {/* Flecha back to the top */}
-      <div 
-      onClick={scrollToTop}
-      className="absolute cursor-pointer sm:top-[40rem] -bottom-[55rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center">
+      <div
+        onClick={scrollToTop}
+        className="absolute cursor-pointer sm:top-[40rem] -bottom-[55rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -81,30 +87,28 @@ const Navbar = () => {
         <img src={logo} className="w-12 mr-2"></img>
         <span className="font-bold">Webdev</span>
       </div>
-      <div>
-        <span>Idioma</span>
-      </div>
+      <ToggleLanguage/>
       <div className=" hidden sm:flex flex-row w-1/2 justify-end h-full items-center">
         <a
           href="#services"
           className="group transtion-all relative w-1/4 h-full flex justify-center items-center overflow-hidden"
         >
           <span className="w-full absolute h-0 -translate-y-10 group-hover:tranlate-y-0 transition-all group-hover:bg-yellow-400 group-hover:h-36"></span>
-          <span className="z-10 group-hover:text-black">Servicios</span>
+          <span className="z-10 group-hover:text-black">{t("navbar.services")}</span>
         </a>
         <a
           href="#content"
           className="group transtion-all relative w-1/4 h-full flex justify-center items-center overflow-hidden"
         >
           <span className="w-full absolute h-0 -translate-y-10 group-hover:tranlate-y-0 transition-all group-hover:bg-yellow-400 group-hover:h-36"></span>
-          <span className="z-10 group-hover:text-black">¿Porque nosotros?</span>
+          <span className="z-10 group-hover:text-black flex text-center">{t("navbar.why us")}</span>
         </a>
         <a
           href="#Form"
           className="group transtion-all relative w-1/4 h-full flex justify-center items-center overflow-hidden"
         >
           <span className="w-full absolute h-0 -translate-y-10 group-hover:tranlate-y-0 transition-all group-hover:bg-yellow-400 group-hover:h-36"></span>
-          <span className="z-10 group-hover:text-black">Contacto</span>
+          <span className="z-10 group-hover:text-black">{t("navbar.contact")}</span>
         </a>
       </div>
       <div className="sm:hidden flex  items-center justify-center pr-4">
@@ -113,11 +117,33 @@ const Navbar = () => {
           onClick={() => setToggle((prev) => !prev)}
           className="z-10"
         ></img>
-        <div className={`absolute items-center justify-center w-full right-0 top-14  bg-black ${toggle? 'h-96 flex transition-all':'h-0 hidden transition-all'}`}>
+        <div
+          className={`absolute items-center justify-center w-full right-0 top-14  bg-black ${
+            toggle ? "h-96 flex transition-all" : "h-0 hidden transition-all"
+          }`}
+        >
           <div className="text-white flex flex-col w-full h-full justify-center items-end px-6">
-            <a href="#services" className="my-4" onClick={() => setToggle((prev) => !prev)}>Servicios</a>
-            <a href="#content" className="my-4" onClick={() => setToggle((prev) => !prev)}>¿Porque nosotros?</a>
-            <a href="#Form" className="my-4" onClick={() => setToggle((prev) => !prev)}>Contacto</a>
+            <a
+              href="#services"
+              className="my-4"
+              onClick={() => setToggle((prev) => !prev)}
+            >
+              Servicios
+            </a>
+            <a
+              href="#content"
+              className="my-4"
+              onClick={() => setToggle((prev) => !prev)}
+            >
+              ¿Porque nosotros?
+            </a>
+            <a
+              href="#Form"
+              className="my-4"
+              onClick={() => setToggle((prev) => !prev)}
+            >
+              Contacto
+            </a>
           </div>
         </div>
       </div>

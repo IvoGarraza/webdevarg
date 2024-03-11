@@ -2,6 +2,24 @@
     "home":{
         "tittle":"Transformamos tus ideas en un Sitio Web",
         "subtittle":"Desarrollo web de última generación para impulsar tu presencia en línea",
-        "button":"¡Quiero mi presupuesto"
+        "button":"¡Quiero mi presupuesto!"
+    },
+    "navbar":{
+        "services":"Servicios",
+        "why us":"¿Porque Nosotros?",
+        "contact":"Contacto"
+    },
+    "content":{
+        "main":"¡Tenemos diferentes soluciones para tu idea!",
+        "card1Title":"Incrementa tus ventas",
+        "card1Text":"Llega a muchos mas visitantes con un sitio web optimizado para vender.",
+        "card2Title":"Te indexamos con Google",
+        "card2Text":"Hace que tus clientes te encuentren en el buscador mas usado del mundo.",
+        "card3Title":"Diseño adaptable",
+        "card3Text":"Tu sitio web, preparado para celulares, pcs, notebooks y tablets."
+    },
+    "works":{
+        "title":"Trabajo Reciente",
+        "subtitle":"Puedes ver el ultimo trabajo que realizamos."
     }
 }

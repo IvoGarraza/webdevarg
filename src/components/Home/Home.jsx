@@ -9,8 +9,11 @@ import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import ParticlesComponent from "../Particles/Particles";
 import HomeSvg from "../Animations/HomeSvg";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const {t}= useTranslation("global")
+
   function ParticleBg(){
   async function loadParticles(main) {
     await loadFull(main)
@@ -50,8 +53,7 @@ const Home = () => {
           />
         </div>
         <span>
-          Desarrollo web de última generación para impulsar tu presencia en
-          línea
+          {t("home.subtittle")}
         </span>
         <div className="mt-4">
           <a
@@ -60,7 +62,7 @@ const Home = () => {
           >
             <span class="absolute left-0 block w-full h-0 transition-all bg-yellow-400 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
             <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease"></span>
-            <span class="relative">¡Quiero mi presupuesto!</span>
+            <span class="relative">{t("home.button")}</span>
           </a>
         </div>
       </div>

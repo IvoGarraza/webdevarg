@@ -3,5 +3,16 @@
         "tittle":"We transform your ideas into a Website",
         "subtittle":"Next-generation web development to boost your online presence",
         "button":"I want my budget!"
+    },
+    "navbar":{
+        "services":"Services",
+        "why us":"Why us?",
+        "contact":"Contact"
+    },
+    "language":
+    {
+        "name":"ENGLISH",
+        "sign":"EN"
     }
+    
 }
