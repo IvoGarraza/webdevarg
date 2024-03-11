@@ -9,10 +9,31 @@
         "why us":"Why us?",
         "contact":"Contact"
     },
+    "content": {
+        "main": "We have different solutions for your idea!",
+        "card1Title": "Increase Your Sales",
+        "card1Text": "Reach many more visitors with a website optimized for selling.",
+        "card2Title": "Get Indexed with Google",
+        "card2Text": "Make your customers find you on the world's most used search engine.",
+        "card3Title": "Adaptable Design",
+        "card3Text": "Your website, ready for mobiles, PCs, notebooks, and tablets."
+    },
+    "works": {
+        "title": "Recent Work",
+        "subtitle": "You can see the latest work we've done."
+    },
     "language":
     {
         "name":"ENGLISH",
         "sign":"EN"
+    },
+    "form":{
+        "name":"Name",
+        "number":"Phone number",
+        "numberPlace":"Phone",
+        "message":"Message",
+        "messagePlace":"Write your message",
+        "button":"Send"
     }
     
 }

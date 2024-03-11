@@ -21,5 +21,13 @@
     "works":{
         "title":"Trabajo Reciente",
         "subtitle":"Puedes ver el ultimo trabajo que realizamos."
+    },
+    "form":{
+        "name":"Nombre",
+        "number":"Numero de teléfono",
+        "numberPlace":"Telefono",
+        "message":"Mensaje",
+        "messagePlace":"Escriba tu mensaje",
+        "button":"Enviar"
     }
 }

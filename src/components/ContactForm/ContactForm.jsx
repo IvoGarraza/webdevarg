@@ -2,11 +2,13 @@ import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import {motion} from 'framer-motion'
 import Check from "./Check/Check";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = ({onCampoCompleto}) => {
   const [formularioEnviado, setFormularioEnviado] = useState(false);
   const [valorCampo, setValorCampo] = useState('');
   const form = useRef();
+  const {t}= useTranslation("global")
 
   const manejarEnvioFormulario = (e) => {
     e.preventDefault();
@@ -40,7 +42,6 @@ const ContactForm = ({onCampoCompleto}) => {
   };
 
   return (
-    
     <div
       id="Form"
       className="sm:h-[40rem] h-[50rem] flex sm:flex-row flex-col bg-yellow-400 text-black items-center justify-center"
@@ -61,13 +62,13 @@ const ContactForm = ({onCampoCompleto}) => {
                     for="name"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Nombre
+                    {t("form.name")}
                   </label>
                   <input
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Nombre"
+                    placeholder={t("form.name")}
                     class="w-full rounded-md border border-black py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -91,13 +92,13 @@ const ContactForm = ({onCampoCompleto}) => {
                     for="subject"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Numero de telefono
+                    {t("form.number")}
                   </label>
                   <input
                     type="text"
                     name="subject"
                     id="subject"
-                    placeholder="Telefono"
+                    placeholder={t("form.numberPlace")}
                     class="w-full rounded-md border border-black bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -106,23 +107,20 @@ const ContactForm = ({onCampoCompleto}) => {
                     for="message"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Mensaje
+                    {t("form.message")}
                   </label>
                   <textarea
                     rows="4"
                     name="message"
                     id="message"
-                    placeholder="Escriba su mensaje"
+                    placeholder={t("form.messagePlace")}
                     value={valorCampo}
                     onChange={(e) => setValorCampo(e.target.value)}
                     class="w-full resize-none rounded-md border border-black bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   ></textarea>
                 </div>
                 <div>
-                  <input class="hover:shadow-form rounded-md bg-black hover:bg-yellow-400 hover:text-white transition-all py-3 px-8 text-base font-semibold text-white outline-none" type="submit" value="Enviar" ></input>
-  {/*                 <button class="hover:shadow-form rounded-md bg-black hover:bg-yellow-400 hover:text-white transition-all py-3 px-8 text-base font-semibold text-white outline-none">
-                    Enviar
-                  </button> */}
+                  <input class="hover:shadow-form rounded-md bg-black hover:bg-yellow-400 hover:text-white transition-all py-3 px-8 text-base font-semibold text-white outline-none" type="submit" value={t("form.button")} ></input>
                 </div>
               </form>
             </div>

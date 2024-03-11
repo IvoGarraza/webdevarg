@@ -8,15 +8,17 @@ import search from "../../assets/SVG/search.svg";
 import design from "../../assets/SVG/design.svg";
 import sales from "../../assets/SVG/sales.svg";
 import isometricDraw from "../../assets/SVG/isometric-draw.svg";
+import { useTranslation } from "react-i18next";
 
 const Content = () => {
+  const {t}= useTranslation("global")
   return (
     <div
       id="content"
       className="w-full bg-white relative flex sm:flex-row items-center flex-col h-[35rem]"
     >
       <div className="w-1/2 h-full hidden sm:flex flex-col items-center justify-center">
-        <span className="font-bold text-3xl w-full text-center">¡Tenemos diferentes soluciones para tu idea!</span>
+        <span className="font-bold text-3xl w-full text-center">{t("content.main")}</span>
         <img src={isometricDraw} className="w-[70%]"></img>
       </div>
       <div className="sm:w-1/2 w-full h-full flex flex-col items-center justify-around">
@@ -26,10 +28,9 @@ const Content = () => {
             {/* <ReactLogo></ReactLogo> */}
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-xl">Incrementa tus ventas</span>
+            <span className="font-bold text-xl">{t("content.card1Title")}</span>
             <span>
-              Llega a muchos mas visitantes con un sitio web optimizado para
-              vender.
+            {t("content.card1Text")}
             </span>
             <div className="w-0 h-1 group-hover:w-full transition-all duration-700 bg-secundario rounded-full"></div>
           </div>
@@ -39,10 +40,9 @@ const Content = () => {
             <img className="w-32 mr-10" src={search}></img>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-xl">Te indexamos con google.</span>
+            <span className="font-bold text-xl">{t("content.card2Title")}</span>
             <span>
-              Hace que tus clientes te encuentren en el buscador mas usado del
-              mundo.
+            {t("content.card2Text")}
             </span>
             <div className="w-0 h-1 group-hover:w-full transition-all duration-700 bg-secundario rounded-full"></div>
           </div>
@@ -52,9 +52,9 @@ const Content = () => {
             <img className="w-32 mr-10" src={design}></img>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-xl">Diseño adaptable</span>
+            <span className="font-bold text-xl">{t("content.card3Title")}</span>
             <span>
-              Tu sitio web, preparado para celulares, pcs, notebooks y tablets.
+            {t("content.card3Text")}
             </span>
             <div className="w-0 h-1 group-hover:w-full transition-all duration-700 bg-secundario rounded-full"></div>
           </div>

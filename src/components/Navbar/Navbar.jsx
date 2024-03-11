@@ -87,28 +87,35 @@ const Navbar = () => {
         <img src={logo} className="w-12 mr-2"></img>
         <span className="font-bold">Webdev</span>
       </div>
-      <ToggleLanguage/>
+
       <div className=" hidden sm:flex flex-row w-1/2 justify-end h-full items-center">
+        <ToggleLanguage/>
         <a
           href="#services"
           className="group transtion-all relative w-1/4 h-full flex justify-center items-center overflow-hidden"
         >
           <span className="w-full absolute h-0 -translate-y-10 group-hover:tranlate-y-0 transition-all group-hover:bg-yellow-400 group-hover:h-36"></span>
-          <span className="z-10 group-hover:text-black">{t("navbar.services")}</span>
+          <span className="z-10 group-hover:text-black">
+            {t("navbar.services")}
+          </span>
         </a>
         <a
           href="#content"
           className="group transtion-all relative w-1/4 h-full flex justify-center items-center overflow-hidden"
         >
           <span className="w-full absolute h-0 -translate-y-10 group-hover:tranlate-y-0 transition-all group-hover:bg-yellow-400 group-hover:h-36"></span>
-          <span className="z-10 group-hover:text-black flex text-center">{t("navbar.why us")}</span>
+          <span className="z-10 group-hover:text-black flex text-center">
+            {t("navbar.why us")}
+          </span>
         </a>
         <a
           href="#Form"
           className="group transtion-all relative w-1/4 h-full flex justify-center items-center overflow-hidden"
         >
           <span className="w-full absolute h-0 -translate-y-10 group-hover:tranlate-y-0 transition-all group-hover:bg-yellow-400 group-hover:h-36"></span>
-          <span className="z-10 group-hover:text-black">{t("navbar.contact")}</span>
+          <span className="z-10 group-hover:text-black">
+            {t("navbar.contact")}
+          </span>
         </a>
       </div>
       <div className="sm:hidden flex  items-center justify-center pr-4">
