@@ -39,7 +39,8 @@
         "messagePlace":"Write your message",
         "button":"Send",
         "title":"Tell us about your idea!",
-        "subtitle":"Complete the form to contact you"
+        "subtitle":"Complete the form to contact you",
+        "send":"Submitted form"
     },
     "services": {
         "title": "Our Services",

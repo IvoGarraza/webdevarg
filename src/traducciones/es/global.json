@@ -34,7 +34,8 @@
         "messagePlace":"Escriba tu mensaje",
         "button":"Enviar",
         "title":"¡Hablanos de tu idea!",
-        "subtitle":"Completa el formulario para poder contactarte"
+        "subtitle":"Completa el formulario para poder contactarte",
+        "send":"Formulario enviado"
     },
     "services":{
         "title":"Nuestros servicios",
