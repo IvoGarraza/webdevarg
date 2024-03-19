@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="sm:h-[50rem] h-[80rem] w-full bg-white flex flex-col items-center justify-center"
+      className="sm:h-[50rem] h-[80rem] w-full pt-4 bg-white flex flex-col items-center justify-center"
     >
       <div className="w-full sm:h-[20%] h-[10%] sm:px-0 px-6 flex flex-col text-center items-center justify-center ">
         <span className="text-2xl font-bold">{t('services.title')}</span>
