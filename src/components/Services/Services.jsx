@@ -13,7 +13,7 @@ const Services = () => {
         <span className="font-medium ">
           {t('services.subtitles')}
         </span>
-        <span className="text-gray-700">
+        <span className="text-gray-700 sm:flex hidden">
           {t('services.subtitles2')}
         </span>
       </div>
