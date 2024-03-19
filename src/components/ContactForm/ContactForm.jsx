@@ -129,6 +129,7 @@ const ContactForm = ({onCampoCompleto}) => {
             <motion.div initial={{scale:0}} animate={{scale:1}} className="bg-white rounded-md flex items-center justify-center h-[50%] w-full">
               <Check></Check>
               <span className="ml-2 font-bold text-xl">Formulario enviado</span>
+              <span>Pronto nos comunicaremos con usted.</span>
             </motion.div>
           )
         }

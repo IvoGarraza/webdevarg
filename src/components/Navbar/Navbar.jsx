@@ -120,7 +120,7 @@ const Navbar = () => {
         </a>
       </div>
       {/* Navbar del movil */}
-      <ToggleLanguage/>
+      
       <div className="sm:hidden flex  items-center justify-center pr-4">
         <img
           src={toggle ? close : menu}
@@ -137,7 +137,7 @@ const Navbar = () => {
               href="#services"
               className="my-4"
               onClick={() => setToggle((prev) => !prev)}
-            >
+              >
               {t('navbar.services')}
             </a>
             <a
@@ -154,6 +154,8 @@ const Navbar = () => {
             >
               {t('navbar.contact')}
             </a>
+            <br/>
+            <ToggleLanguage/>
           </div>
         </div>
       </div>
