@@ -40,9 +40,9 @@ function App() {
         avatar={logo}
         accountName="WebdeV"
         statusMessage="Normalmente responde en 1 hora"
-        chatMessage="Hola! Como te puedo ayudar?"
+        chatMessage="Hola! Como puedo ayudarte?"
         placeholder="Escribe un mensaje..."
-        className="wm:w-auto w-10"
+        className="sm:w-auto w-10"
         notificationSound='true'
         allowEsc='true'
         allowClickAway='true'

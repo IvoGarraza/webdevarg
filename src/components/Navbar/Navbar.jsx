@@ -66,7 +66,7 @@ const Navbar = () => {
       {/* Flecha back to the top */}
       <div
         onClick={scrollToTop}
-        className="absolute cursor-pointer sm:top-[40rem] -bottom-[55rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center"
+        className="absolute cursor-pointer sm:top-[40rem] -bottom-[50rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,6 +83,7 @@ const Navbar = () => {
           />
         </svg>
       </div>
+      {/* ------------------------------ */}
       <div className="w-1/3 ml-4 flex flex-row">
         <img src={logo} className="w-12 mr-2"></img>
         <span className="font-bold">Webdev</span>
@@ -118,6 +119,8 @@ const Navbar = () => {
           </span>
         </a>
       </div>
+      {/* Navbar del movil */}
+      <ToggleLanguage/>
       <div className="sm:hidden flex  items-center justify-center pr-4">
         <img
           src={toggle ? close : menu}
@@ -126,30 +129,30 @@ const Navbar = () => {
         ></img>
         <div
           className={`absolute items-center justify-center w-full right-0 top-14  bg-black ${
-            toggle ? "h-96 flex transition-all" : "h-0 hidden transition-all"
+            toggle ? "h-96 transition-all" : "h-0  transition-all"
           }`}
         >
-          <div className="text-white flex flex-col w-full h-full justify-center items-end px-6">
+          <div className={`text-white flex flex-col w-full h-full ${toggle ? 'flex':'hidden'} transition-all justify-center items-end px-6`}>
             <a
               href="#services"
               className="my-4"
               onClick={() => setToggle((prev) => !prev)}
             >
-              Servicios
+              {t('navbar.services')}
             </a>
             <a
               href="#content"
               className="my-4"
               onClick={() => setToggle((prev) => !prev)}
             >
-              ¿Porque nosotros?
+              {t('navbar.why us')}
             </a>
             <a
               href="#Form"
               className="my-4"
               onClick={() => setToggle((prev) => !prev)}
             >
-              Contacto
+              {t('navbar.contact')}
             </a>
           </div>
         </div>

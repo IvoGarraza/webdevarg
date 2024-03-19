@@ -1,81 +1,70 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
-  
-
-
+  const [t, i18n] = useTranslation("global");
   return (
     <div
       id="services"
       className="sm:h-[50rem] h-[80rem] w-full bg-white flex flex-col items-center justify-center"
     >
-      <div className="w-full sm:h-[20%] h-[10%] flex flex-col items-center justify-center ">
-        <span className="text-2xl font-bold">Nuestros servicios</span>
-        <span className="font-medium text-center">
-          Estos son algunos de los planes que ofrecemos
+      <div className="w-full sm:h-[20%] h-[10%] sm:px-0 px-6 flex flex-col text-center items-center justify-center ">
+        <span className="text-2xl font-bold">{t('services.title')}</span>
+        <span className="font-medium ">
+          {t('services.subtitles')}
         </span>
-        <span className="text-gray-700">(El precio de los servicios comprende los 12 meses, para un periodo mas largo consultar cotizacion)</span>
+        <span className="text-gray-700">
+          {t('services.subtitles2')}
+        </span>
       </div>
       <div className=" w-full flex sm:flex-row flex-col items-center justify-around py-6 sm:h-[80%] h-[90%]">
-        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] h-full w-[90%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
+        <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] h-[30%] w-[90%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
-            <span className="text-xl sm:mb-[10px] mb-[5px]">One Page</span>
-            <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$110.000</span>
+            <span className="text-xl sm:mb-[10px] mb-[5px]">{t('services.card1.title')}</span>
+            <div className="sm:flex hidden w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
+            <span className="sm:mt-[10px] sm:flex hidden mt-[5px]">$110.000</span>
           </div>
-          <div className="h-[70%] overflow-hidden">
-            <p className="p-4  text-center">
-              One page concentra toda la información en una sola página. Los
-              visitantes pueden deslizarse hacia abajo en un flujo continuo para
-              conocer tu negocio. Aunque es más concisa y directa, a veces es
-              ideal para presentar una idea o producto de manera cautivadora y
-              efectiva, especialmente en dispositivos móviles donde la
-              simplicidad es fundamental.
+          <div className="h-[70%] overflow-hidden text-sm">
+            <p className="p-4  text-center">{t('services.card1.content')}
             </p>
           </div>
-          <a className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
-            Consultar
+          <a className="bg-terciario w-full sm:h-[10%] h-[20%] text-white font-bold flex items-center justify-center rounded-b-md">
+            {t('services.card1.button')}
           </a>
         </div>
         <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
-            <span className="text-xl sm:mb-[10px] mb-[5px]">Institucional</span>
-            <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$160.000</span>
+            <span className="text-xl sm:mb-[10px] mb-[5px]">{t('services.card2.title')}</span>
+            <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full sm:flex hidden"></div>
+            <span className="sm:mt-[10px] mt-[5px] sm:flex hidden">$160.000</span>
           </div>
-          <div className="h-[70%] overflow-hidden">
+          <div className="h-[70%] overflow-hidden text-sm">
             <p className="p-4  text-center">
-              Esta es tu tarjeta de presentación digital. A diferencia de una
-              página one page, aquí tenemos múltiples páginas. Cada página tiene
-              un propósito específico, como “Inicio”, “Acerca de Nosotros”,
-              “Servicios”, “Contacto”, y más. Cada sección se dedica a una
-              función particular, lo que permite una presentación detallada de
-              tu empresa y sus servicios. Desde dispositivos móviles, tus
-              visitantes pueden navegar fácilmente a través de estas páginas
-              para obtener información completa y específica sobre tu negocio.
+              {t('services.card2.content')}
             </p>
           </div>
-          <a href="https://www.google.com.ar" className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
-            Consultar
+          <a
+            href="https://www.google.com.ar"
+            className="bg-terciario w-full sm:h-[10%] h-[20%] text-white font-bold flex items-center justify-center rounded-b-md"
+          >
+            {t('services.card2.button')}
           </a>
         </div>
         <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
           <div className="bg-black flex-col group-hover:bg-yellow-400 group-hover:text-black transition-all text-white w-full h-[20%] flex items-center justify-center font-semibold">
-            <span className="text-xl sm:mb-[10px] mb-[5px]">Tienda online</span>
-            <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full"></div>
-            <span className="sm:mt-[10px] mt-[5px]">$0...</span>
+            <span className="text-xl sm:mb-[10px] mb-[5px]">{t('services.card3.title')}</span>
+            <div className="w-[90%] h-[2px] bg-white opacity-50 rounded-full sm:flex hidden"></div>
+            <span className="sm:mt-[10px] mt-[5px] sm:flex hidden">$0...</span>
           </div>
-          <div className="overflow-hidden h-[70%]">
-            <p className="p-4 text-center">
-              Si deseas vender productos en línea, necesitas una página de
-              e-commerce. Es como tener una tienda virtual abierta las 24 horas.
-              Desde dispositivos móviles, tus clientes pueden explorar tu
-              catálogo y realizar compras seguras. Es una forma eficiente y conveniente de
-              expandir tu negocio en el mundo digital.
+          <div className="overflow-hidden h-[70%] text-sm">
+            <p className="p-4 text-center">{t('services.card3.content')}
             </p>
           </div>
-          <a href="https://www.google.com.ar" className="bg-terciario w-full h-[10%] text-white font-bold flex items-center justify-center rounded-b-md">
-            Consultar
+          <a
+            href="https://www.google.com.ar"
+            className="bg-terciario w-full sm:h-[10%] h-[20%] text-white font-bold flex items-center justify-center rounded-b-md"
+          >
+            {t('services.card3.button')}
           </a>
         </div>
       </div>

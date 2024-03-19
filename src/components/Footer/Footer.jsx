@@ -1,15 +1,18 @@
 import React from "react";
 import instagram from '../../assets/SVG/instagram.svg'
 import facebook from '../../assets/SVG/facebook.svg'
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const {t} = useTranslation("global")
+
   return (
     <footer class="relative bg-white pt-8 pb-6">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap text-left lg:text-left">
           <div class="w-full lg:w-6/12 px-4">
             <h4 class="text-3xl fonat-semibold text-blueGray-700">
-            ¡Mantengámonos en contacto!
+            {t("footer.title")}
             </h4>
 {/*             <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
               Find us on any of these platforms, we respond 1-2 business days.
@@ -47,7 +50,7 @@ const Footer = () => {
             <div class="flex flex-wrap items-top justify-end text-end mb-6">
               <div class="w-full lg:w-4/12 px-4">
                 <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                  Secciones
+                  {t("navbar.sections")}
                 </span>
                 <ul class="list-unstyled">
                   <li>
@@ -55,7 +58,7 @@ const Footer = () => {
                       class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
                     >
-                      Servicios
+                      {t("navbar.services")}
                     </a>
                   </li>
                   <li>
@@ -63,7 +66,7 @@ const Footer = () => {
                       class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/terms?ref=njs-profile"
                     >
-                      ¿Porque nosotros?
+                      {t("navbar.why us")}
                     </a>
                   </li>
                   <li>
@@ -71,7 +74,7 @@ const Footer = () => {
                       class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/contact-us?ref=njs-profile"
                     >
-                      Contacto
+                      {t("navbar.contact")}
                     </a>
                   </li>
                 </ul>

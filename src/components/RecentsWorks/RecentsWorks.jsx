@@ -16,7 +16,7 @@ const RecentsWorks = () => {
                 <img src={imageWork} className='w-72 rounded-md grayscale-1'></img>    
             </div>       
             <div className='sm:ml-12 flex flex-col text-center'>
-                <div>01/02/2024</div>
+                {/* <div>01/02/2024</div> */}
                 <a className='bg-yellow-400 flex flex-row rounded-md p-2 justify-center items-center'>
                     <img src={recent} className='w-6 fill-black'></img>
                     <a>Ver sitio</a>

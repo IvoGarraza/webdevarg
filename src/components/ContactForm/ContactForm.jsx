@@ -48,8 +48,8 @@ const ContactForm = ({onCampoCompleto}) => {
     >
       
       <div className="h-[20%] sm:w-1/2 w-full flex  flex-col text-center items-center justify-center text-black">
-        <span className="font-bold text-2xl">¡Hablanos de tu idea!</span>
-        <span className="text-black ">Completa el formulario para poder contactarte</span>
+        <span className="font-bold text-2xl">{t("form.title")}</span>
+        <span className="text-black ">{t("form.subtitle")}</span>
       </div>
       <div className="h-[90%]  sm:w-[45%] w-[98%] items-center justify-around flex flex-col  ">
         {

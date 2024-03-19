@@ -20,7 +20,7 @@ const Home = () => {
   }
   }
   return (
-    <div className="bg-transparent sm:bg-gradient-to-r from-10% from-black overflow-hidden relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[40rem] pt-6">
+    <div className="bg-transparent sm:bg-gradient-to-r from-5% from-black overflow-hidden relative w-full flex sm:flex-row flex-col sm:justify-around justify-center items-center text-white h-[40rem] pt-6">
       {/* <video
         src={typing}
         className="sm:h-auto sm:flex hidden h-full sm:w-full w-auto -z-10 absolute right-0"
@@ -55,7 +55,7 @@ const Home = () => {
         <span>
           {t("home.subtittle")}
         </span>
-        <div className="mt-4">
+        <div className="mt-4 ">
           <a
             href="#Form"
             class="relative inline-flex items-center px-10 py-3 overflow-hidden text-lg font-medium text-yellow-400 border-2 border-yellow-400 rounded-full hover:text-white group hover:bg-gray-50"
