@@ -56,7 +56,7 @@ const Footer = () => {
                   <li>
                     <a
                       class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
+                      href="#services"
                     >
                       {t("navbar.services")}
                     </a>
@@ -64,7 +64,7 @@ const Footer = () => {
                   <li>
                     <a
                       class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms?ref=njs-profile"
+                      href="#content"
                     >
                       {t("navbar.why us")}
                     </a>
@@ -72,7 +72,7 @@ const Footer = () => {
                   <li>
                     <a
                       class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us?ref=njs-profile"
+                      href="#Form"
                     >
                       {t("navbar.contact")}
                     </a>

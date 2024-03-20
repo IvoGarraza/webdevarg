@@ -19,7 +19,7 @@ const RecentsWorks = () => {
                 {/* <div>01/02/2024</div> */}
                 <a className='bg-yellow-400 flex flex-row rounded-md p-2 justify-center items-center'>
                     <img src={recent} className='w-6 fill-black'></img>
-                    <a>Ver sitio</a>
+                    <a href='https://andesdean.onrender.com/'>Ver sitio</a>
                 </a>
             </div>     
         </div>
