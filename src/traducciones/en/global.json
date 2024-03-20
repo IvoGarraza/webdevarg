@@ -40,7 +40,8 @@
         "button":"Send",
         "title":"Tell us about your idea!",
         "subtitle":"Complete the form to contact you",
-        "send":"Submitted form"
+        "send":"Submitted form",
+        "sendSub":"We will contact you soon."
     },
     "services": {
         "title": "Our Services",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import video from "../../assets/webdeveloper.mp4";
 import typing from "../../assets/typing-video.mp4";
@@ -12,7 +12,13 @@ import HomeSvg from "../Animations/HomeSvg";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const {t}= useTranslation("global")
+  const [t, i18n] = useTranslation("global");
+  const [key, setKey] = useState(0); // Añade una clave para forzar el re-renderizado
+
+  // Efecto para detectar cambios en el idioma y actualizar la clave
+  useEffect(() => {
+    setKey(prevKey => prevKey + 1); // Cambia la clave para forzar el re-renderizado
+  }, [i18n.language]); // Dependencia del efecto: idioma actual
 
   function ParticleBg(){
   async function loadParticles(main) {
@@ -35,9 +41,10 @@ const Home = () => {
       <div className="flex flex-col text-start px-6 sm:pl-12 sm:w-1/2 w-full">
         <div>
           <TypeAnimation
+          key={i18n.language}
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              "Transformamos tus ideas en un Sitio Web",
+              t('home.tittle'),
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               /* 'We produce food for Hamsters',
         1000,

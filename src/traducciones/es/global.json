@@ -35,7 +35,8 @@
         "button":"Enviar",
         "title":"¡Hablanos de tu idea!",
         "subtitle":"Completa el formulario para poder contactarte",
-        "send":"Formulario enviado"
+        "send":"Formulario enviado",
+    "sendSub":"Pronto nos comunicaremos con usted."
     },
     "services":{
         "title":"Nuestros servicios",
