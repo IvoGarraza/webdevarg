@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const Services = () => {
+const Services = ({ onTagClick }) => {
   const [t, i18n] = useTranslation("global");
   return (
     <div
@@ -28,8 +28,11 @@ const Services = () => {
             <p className="p-4  text-center">{t('services.card1.content')}
             </p>
           </div>
-          <a className="bg-terciario w-full sm:h-[10%] h-[20%] text-white font-bold flex items-center justify-center rounded-b-md">
-            {t('services.card1.button')}
+          <a 
+          href="#Form"
+          onClick={()=>onTagClick(t('services.card1.button.value'))}
+          className="bg-terciario w-full sm:h-[10%] h-[20%] text-white font-bold flex items-center justify-center rounded-b-md">
+            {t('services.card1.button.text')}
           </a>
         </div>
         <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
@@ -44,10 +47,11 @@ const Services = () => {
             </p>
           </div>
           <a
-            href="https://www.google.com.ar"
+            href="#Form"
+            onClick={()=>onTagClick(t('services.card2.button.value'))}
             className="bg-terciario w-full sm:h-[10%] h-[20%] text-white font-bold flex items-center justify-center rounded-b-md"
           >
-            {t('services.card2.button')}
+            {t('services.card2.button.text')}
           </a>
         </div>
         <div className="group shadow-lg hover:-mt-4 hover:mb-4 transition-all sm:w-1/4 sm:h-[95%] w-[90%] h-[30%] flex flex-col items-center justify-between bg-white rounded-md border-[1px] overflow-hidden border-slate-200">
@@ -61,10 +65,11 @@ const Services = () => {
             </p>
           </div>
           <a
-            href="https://www.google.com.ar"
+            href="#Form"
+            onClick={()=>onTagClick(t('services.card3.button.value'))}
             className="bg-terciario w-full sm:h-[10%] h-[20%] text-white font-bold flex items-center justify-center rounded-b-md"
           >
-            {t('services.card3.button')}
+            {t('services.card3.button.text')}
           </a>
         </div>
       </div>

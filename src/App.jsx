@@ -14,6 +14,12 @@ import global_en from './traducciones/en/global.json'
 import { I18nextProvider, useTranslation } from "react-i18next";
 
 function App() {
+  const [inputValue, setInputValue] = useState('');
+
+  // Función para manejar el clic en la etiqueta y actualizar el input
+  const handleTagClick = (tag) => {
+    setInputValue(tag);
+  };
   
   i18next.init({
     interpolation: { escapeValue: false }, // Evita la necesidad de escapar contenido
@@ -34,8 +40,8 @@ function App() {
       <Home></Home>
       <Content></Content>
       <RecentsWorks></RecentsWorks>
-      <Services></Services>
-      <ContactForm></ContactForm>
+      <Services onTagClick={handleTagClick}></Services>
+      <ContactForm inputValue={inputValue} setInputValue={setInputValue}></ContactForm>
       <Footer></Footer>
       <FloatingWhatsApp
         phoneNumber="+5493562408275"

@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import Check from "./Check/Check";
 import { useTranslation } from "react-i18next";
 
-const ContactForm = ({onCampoCompleto}) => {
+const ContactForm = ({onCampoCompleto, inputValue, setInputValue }) => {
   const [formularioEnviado, setFormularioEnviado] = useState(false);
   const [valorCampo, setValorCampo] = useState('');
   const form = useRef();
@@ -114,8 +114,8 @@ const ContactForm = ({onCampoCompleto}) => {
                     name="message"
                     id="message"
                     placeholder={t("form.messagePlace")}
-                    value={valorCampo}
-                    onChange={(e) => setValorCampo(e.target.value)}
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
                     class="w-full resize-none rounded-md border border-black bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   ></textarea>
                 </div>
