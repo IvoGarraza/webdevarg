@@ -11,9 +11,16 @@ import logo from "../src/assets/logo.png";
 import i18next from "i18next";
 import global_es from './traducciones/es/global.json'
 import global_en from './traducciones/en/global.json'
-import { I18nextProvider } from "react-i18next";
+import { I18nextProvider, useTranslation } from "react-i18next";
 
 function App() {
+  const [inputValue, setInputValue] = useState('');
+
+  // Función para manejar el clic en la etiqueta y actualizar el input
+  const handleTagClick = (tag) => {
+    setInputValue(tag);
+  };
+  
   i18next.init({
     interpolation: { escapeValue: false }, // Evita la necesidad de escapar contenido
     lng: "es", // Idioma predeterminado
@@ -26,27 +33,27 @@ function App() {
       },
     },
   })
+  const {t}= useTranslation("global")
   return (
     <I18nextProvider i18n={i18next} className="flex flex-col relative w font-montserrat">
       <Navbar className=""></Navbar>
       <Home></Home>
       <Content></Content>
       <RecentsWorks></RecentsWorks>
-      <Services></Services>
-      <ContactForm></ContactForm>
+      <Services onTagClick={handleTagClick}></Services>
+      <ContactForm inputValue={inputValue} setInputValue={setInputValue}></ContactForm>
       <Footer></Footer>
-      <FloatingWhatsApp
+{/*      <FloatingWhatsApp
         phoneNumber="+5493562408275"
         avatar={logo}
         accountName="WebdeV"
         statusMessage="Normalmente responde en 1 hora"
-        chatMessage="Hola! Como te puedo ayudar?"
+        chatMessage={i18next.language=='es'?'Hola, como te puedo ayudar?':'Hello, how can I help you?'}
         placeholder="Escribe un mensaje..."
-        className="wm:w-auto w-10"
         notificationSound='true'
         allowEsc='true'
         allowClickAway='true'
-      ></FloatingWhatsApp>
+      ></FloatingWhatsApp>*/}
     </I18nextProvider>
   );
 }

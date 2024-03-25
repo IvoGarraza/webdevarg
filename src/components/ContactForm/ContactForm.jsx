@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import Check from "./Check/Check";
 import { useTranslation } from "react-i18next";
 
-const ContactForm = ({onCampoCompleto}) => {
+const ContactForm = ({onCampoCompleto, inputValue, setInputValue }) => {
   const [formularioEnviado, setFormularioEnviado] = useState(false);
   const [valorCampo, setValorCampo] = useState('');
   const form = useRef();
@@ -48,8 +48,8 @@ const ContactForm = ({onCampoCompleto}) => {
     >
       
       <div className="h-[20%] sm:w-1/2 w-full flex  flex-col text-center items-center justify-center text-black">
-        <span className="font-bold text-2xl">¡Hablanos de tu idea!</span>
-        <span className="text-black ">Completa el formulario para poder contactarte</span>
+        <span className="font-bold text-2xl">{t("form.title")}</span>
+        <span className="text-black ">{t("form.subtitle")}</span>
       </div>
       <div className="h-[90%]  sm:w-[45%] w-[98%] items-center justify-around flex flex-col  ">
         {
@@ -114,8 +114,8 @@ const ContactForm = ({onCampoCompleto}) => {
                     name="message"
                     id="message"
                     placeholder={t("form.messagePlace")}
-                    value={valorCampo}
-                    onChange={(e) => setValorCampo(e.target.value)}
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
                     class="w-full resize-none rounded-md border border-black bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   ></textarea>
                 </div>
@@ -126,9 +126,10 @@ const ContactForm = ({onCampoCompleto}) => {
             </div>
           </div>
           ):(
-            <motion.div initial={{scale:0}} animate={{scale:1}} className="bg-white rounded-md flex items-center justify-center h-[50%] w-full">
+            <motion.div initial={{scale:0}} animate={{scale:1}} className="bg-white rounded-md flex items-center flex-col justify-center h-[50%] w-full">
               <Check></Check>
-              <span className="ml-2 font-bold text-xl">Formulario enviado</span>
+              <span className="ml-2 font-bold text-4xl">{t('form.send')}</span>
+              <span className="text-xl">{t('form.sendSub')}</span>
             </motion.div>
           )
         }

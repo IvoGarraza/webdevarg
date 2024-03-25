@@ -7,7 +7,11 @@
     "navbar":{
         "services":"Services",
         "why us":"Why us?",
-        "contact":"Contact"
+        "contact":"Contact",
+        "sections":"Sections"
+    },
+    "footer":{
+        "title":"Let's stay in touch!"
     },
     "content": {
         "main": "We have different solutions for your idea!",
@@ -33,7 +37,39 @@
         "numberPlace":"Phone",
         "message":"Message",
         "messagePlace":"Write your message",
-        "button":"Send"
-    }
+        "button":"Send",
+        "title":"Tell us about your idea!",
+        "subtitle":"Complete the form to contact you",
+        "send":"Submitted form",
+        "sendSub":"We will contact you soon."
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitles": "These are some of the plans we offer",
+        "subtitles2": "(The price of the services includes 12 months, for a longer period consult quotation)",
+        "card1": {
+        "title": "One Page",
+        "content": "One page concentrates all the information on a single page. Visitors can scroll down in a continuous flow to learn about your business. Although it's more concise and direct, it's sometimes ideal for presenting an idea or product in a captivating and effective way, especially on mobile devices where simplicity is key.",
+        "button":{
+            "text":"Consultar",
+            "value":"Hola, quiero consultar por una web One Page"
+        }
+        },
+        "card2": {
+        "title": "Institutional",
+        "content": "The institutional page offers a comprehensive presentation of your business, allowing for multiple sections to explore different aspects of your company. Visitors can navigate through various sections to gain a complete understanding of your business. This option is ideal for conveying information in an organized and thorough manner, tailored to the specific needs of your company.",
+        "button":{
+            "text":"Consultar",
+            "value":"Hola, quiero consultar por una web Institucional"
+        }},
+        "card3": {
+        "title": "Online Store",
+        "content": "If you want to sell products online, you need an e-commerce page. It's like having a virtual store open 24 hours a day. From mobile devices, your customers can browse your catalog and make secure purchases. It's an efficient and convenient way to expand your business into the digital world.",
+        "button":{
+            "text":"Consultar",
+            "value":"Hola, quiero consultar por una Tienda Online"
+        }
+        }
+        }
     
 }

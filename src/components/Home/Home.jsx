@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import video from "../../assets/webdeveloper.mp4";
 import typing from "../../assets/typing-video.mp4";
@@ -12,7 +12,13 @@ import HomeSvg from "../Animations/HomeSvg";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const {t}= useTranslation("global")
+  const [t, i18n] = useTranslation("global");
+  const [key, setKey] = useState(0); // Añade una clave para forzar el re-renderizado
+
+  // Efecto para detectar cambios en el idioma y actualizar la clave
+  useEffect(() => {
+    setKey(prevKey => prevKey + 1); // Cambia la clave para forzar el re-renderizado
+  }, [i18n.language]); // Dependencia del efecto: idioma actual
 
   function ParticleBg(){
   async function loadParticles(main) {
@@ -20,7 +26,7 @@ const Home = () => {
   }
   }
   return (
-    <div className="bg-transparent sm:bg-gradient-to-r from-10% from-black overflow-hidden relative w-full flex sm:flex-row flex-col justify-around items-center text-white h-[40rem] pt-6">
+    <div className="bg-transparent sm:bg-gradient-to-r from-5% from-black overflow-hidden relative w-full flex sm:flex-row flex-col sm:justify-around justify-center items-center text-white h-[40rem] pt-6">
       {/* <video
         src={typing}
         className="sm:h-auto sm:flex hidden h-full sm:w-full w-auto -z-10 absolute right-0"
@@ -35,9 +41,10 @@ const Home = () => {
       <div className="flex flex-col text-start px-6 sm:pl-12 sm:w-1/2 w-full">
         <div>
           <TypeAnimation
+          key={i18n.language}
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              "Transformamos tus ideas en un Sitio Web",
+              t('home.tittle'),
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               /* 'We produce food for Hamsters',
         1000,
@@ -55,7 +62,7 @@ const Home = () => {
         <span>
           {t("home.subtittle")}
         </span>
-        <div className="mt-4">
+        <div className="mt-4 ">
           <a
             href="#Form"
             class="relative inline-flex items-center px-10 py-3 overflow-hidden text-lg font-medium text-yellow-400 border-2 border-yellow-400 rounded-full hover:text-white group hover:bg-gray-50"
