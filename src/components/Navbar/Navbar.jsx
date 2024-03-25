@@ -14,6 +14,9 @@ const Navbar = () => {
   const [language, setLanguage] = useState("es");
   const [t, i18n] = useTranslation("global");
 
+
+  
+
   const handleScroll = () => {
     const totalScroll = document.documentElement.scrollTop;
     const windowHeight =
