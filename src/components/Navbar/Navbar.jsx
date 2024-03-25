@@ -89,7 +89,7 @@ const Navbar = () => {
       {/* ------------------------------ */}
       <div className="w-1/3 ml-4 flex flex-row">
         <img src={logo} className="w-12 mr-2"></img>
-        <span className="font-bold">Webdev</span>
+        <span className="font-bold font-Code">WebdeV</span>
       </div>
 
       <div className=" hidden sm:flex flex-row w-1/2 justify-end h-full items-center">

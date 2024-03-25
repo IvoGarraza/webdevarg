@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'montserrat': ['"Montserrat", sans-serif'],
+        'Code':["Code", "sans-serif"]
       },
       colors:{
         primario:'#FFD60A',
