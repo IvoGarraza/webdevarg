@@ -43,7 +43,7 @@ function App() {
       <Services onTagClick={handleTagClick}></Services>
       <ContactForm inputValue={inputValue} setInputValue={setInputValue}></ContactForm>
       <Footer></Footer>
-{/*      <FloatingWhatsApp
+     <FloatingWhatsApp
         phoneNumber="+5493562408275"
         avatar={logo}
         accountName="WebdeV"
@@ -53,7 +53,7 @@ function App() {
         notificationSound='true'
         allowEsc='true'
         allowClickAway='true'
-      ></FloatingWhatsApp>*/}
+      ></FloatingWhatsApp>
     </I18nextProvider>
   );
 }

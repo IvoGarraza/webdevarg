@@ -69,7 +69,7 @@ const Navbar = () => {
       {/* Flecha back to the top */}
       <div
         onClick={scrollToTop}
-        className="absolute cursor-pointer sm:top-[40rem] -bottom-[50rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center"
+        className="absolute cursor-pointer sm:top-[40rem] -bottom-[35rem] left-5 rounded-md bg-cuarto w-12 h-12 z-10 flex items-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
